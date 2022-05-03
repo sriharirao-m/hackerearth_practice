@@ -1,7 +1,10 @@
-package com.srihari.practice.hackerearth.codemonk.arrays_and_Strings;
+package com.srihari.practice.hackerearth.codemonk.arrays_and_strings;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /**
- * @see https://<a href="www.hackerearth.com/practice/codemonk/">www.hackerearth.com/practice/codemonk/</a>
+ * @see <a https://<a href="www.hackerearth.com/practice/codemonk/">Hacker Earth</a>
  *
  * Monk and Rotation:
  * Monk loves to preform different operations on arrays, and so being the principal of Hackerearth School,
@@ -12,7 +15,7 @@ package com.srihari.practice.hackerearth.codemonk.arrays_and_Strings;
  *
  *
  * Input:
- * The first line will consists of one integer T denoting the number of test cases.
+ * The first line will consist of one integer T denoting the number of test cases.
  * For each test case:
  * 1) The first line consists of two integers N and K, N being the number of elements in the array
  * and K denotes the number of steps of rotation.
@@ -54,13 +57,10 @@ package com.srihari.practice.hackerearth.codemonk.arrays_and_Strings;
  * @author SRIHARI
  */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 // Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
 
 class MonkAndRotation {
-    public static void main(String args[] ) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         MonkAndRotation tc = new MonkAndRotation();
 
@@ -125,18 +125,14 @@ class MonkAndRotation {
             if(i != dataArray.length-1) {
                 System.out.print(" ");
             } else {
-                System.out.println("");
+                System.out.println();
             }
         }
 
     }
 
-    public Integer[] copyArray1to2(Integer[] copyData, Integer[] pasteData) {
-        for(int i = 0; i < copyData.length; i++) {
-            pasteData[i] = copyData[i];
-        }
-
-        return pasteData;
+    public void copyArray1to2(Integer[] copyData, Integer[] pasteData) {
+        System.arraycopy(copyData, 0, pasteData, 0, copyData.length);
     }
 
     public Integer[] copyArray1to2(String[] copyData, Integer[] pasteData) {
